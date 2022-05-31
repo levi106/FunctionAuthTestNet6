@@ -7,11 +7,11 @@ using Microsoft.Extensions.Logging;
 
 namespace BackendApp
 {
-    public static class HttpTrigger1
+    public static class HttpTrigger2
     {
-        [FunctionName("HttpTrigger1")]
+        [FunctionName("HttpTrigger2")]
         public static async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)] HttpRequest req,
+            [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req,
             ILogger log)
         {
             log.LogInformation("C# HTTP trigger function processed a request.");
