@@ -23,7 +23,7 @@ namespace BackendApp
                 {
                     log.LogInformation($"CLAIM TYPE: {claim.Type}; CLAIM VALUE: {claim.Value}");
                 }
-                log.LogInformation($"Is in Task.Read role?: {principal.IsInRole("Task.Read")}");
+                log.LogInformation($"Has Task.Read role?: {principal.HasClaim("roles", "Task.Read")}");
             }
 
             string responseMessage = "Hello World";
